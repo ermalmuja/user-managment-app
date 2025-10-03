@@ -187,11 +187,19 @@ function page() {
                   </div>
                 </div>
               </CardContent>
-              <CardFooter className="flex-col gap-2">
-                <Link href={`/users/${user.id}`} className="w-full">
-                  <Button className="w-full">See user details</Button>
-                </Link>
-              </CardFooter>
+              {user.company ? (
+                <CardFooter className="flex-col gap-2">
+                  <Link href={`/users/${user.id}`} className="w-full">
+                    <Button className="w-full">See user details</Button>
+                  </Link>
+                </CardFooter>
+              ) : (
+                <CardFooter className="flex-col gap-2">
+                  <Button disabled className="w-full">
+                    This is placed in locad storage
+                  </Button>
+                </CardFooter>
+              )}
             </Card>
           ))
         ) : (

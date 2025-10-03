@@ -1,11 +1,18 @@
-"use client";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <h1>Welcome</h1>
-      <Link href="/users">Go to users page</Link>
+    <div className="flex flex-col items-center justify-center min-h-screen p-8 gap-10">
+      <h1 className="text-4xl font-extrabold text-center">Welcome</h1>
+
+      <p className="text-lg text-center max-w-md">
+        Step inside and explore amazing profiles. You won’t regret clicking
+        below!
+      </p>
+      <Button>
+        <Link href="/users">Go to Users Page</Link>
+      </Button>
     </div>
   );
 }

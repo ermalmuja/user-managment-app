@@ -58,11 +58,6 @@ function page() {
             </div>
           </div>
         </CardContent>
-        <CardFooter className="flex-col gap-2">
-          <Button type="submit" className="w-full">
-            See user details
-          </Button>
-        </CardFooter>
       </Card>
     </div>
   );
